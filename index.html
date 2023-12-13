@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700;800;900;1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Writings.dev</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        padding: 0px;
+        margin: 0px;
+      }
+
+      :root {
+        --white: #fff;
+        --primary: #ff7575;
+        --font-accent: #909090;
+      }
+
+      body {
+        font-family: "Recursive", sans-serif;
+        background: #232830;
+        color: var(--white);
+      }
+
+      .container {
+        max-width: 1444px;
+        margin: 0px auto;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        margin: 75px 0px;
+      }
+
+      header h1 {
+        color: var(--white);
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 1.5;
+      }
+
+      header nav {
+        display: flex;
+        align-items: center;
+        gap: 36px;
+      }
+
+      header nav a {
+        text-decoration: none;
+        text-transform: lowercase;
+        color: var(--white);
+        font-size: 24px;
+        line-height: 1.5;
+      }
+
+      .main-logo {
+        display: block;
+        width: 200px;
+        height: 200px;
+        margin: 0px auto 40px;
+      }
+
+      .title {
+        color: var(--primary);
+        font-style: italic;
+        text-align: center;
+        font-size: 4.4375rem;
+        line-height: 1.2;
+        font-weight: 400;
+      }
+
+      .description {
+        margin-top: 18px;
+        line-height: 1.5;
+        text-align: center;
+        color: var(--white);
+      }
+
+      .divider {
+        margin: 100px 0px 16px 0px;
+        border: 0px;
+        height: 3px;
+        background-color: #4d4d4d;
+        opacity: 0.2;
+      }
+
+      .category-section-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .view-switch-container {
+        display: inline-flex;
+        gap: 13px;
+      }
+
+      .view-switch-container > a {
+        height: 24px;
+        width: 24px;
+      }
+
+      .category-container {
+        display: inline-flex;
+        gap: 36px;
+        padding: 0px 36px;
+        margin-left: 5px;
+      }
+
+      .category {
+        display: inline;
+        font-size: 27px;
+        line-height: 1.2;
+        font-weight: 400;
+        font-style: italic;
+        color: var(--font-accent);
+      }
+
+      .card-wrapper {
+        margin: 111px auto 132px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .card-container {
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 37px;
+        place-items: center;
+      }
+
+      .card-container > div {
+        height: 440px;
+        width: 390px;
+        background-color: var(--white);
+        border-radius: 22px;
+        border: 1px solid #252930;
+        padding: 26px;
+      }
+
+      .pagination-container {
+        display: flex;
+        gap: 43px;
+        justify-content: center;
+      }
+
+      .page-numbers {
+        display: inline-flex;
+        gap: 36px;
+        align-items: center;
+      }
+
+      .pagination-container a {
+        font-size: 25px;
+        color: var(--font-accent);
+        font-style: italic;
+        position: relative;
+      }
+
+      .active-page::before {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 54px;
+        position: absolute;
+        transform: translate(-25%, -17px);
+        /* width: 100%; */
+        top: 0;
+        left: 0;
+        right: 0; 
+        background-color: var(--primary);
+      }
+
+
+      footer {
+        margin-top: 157px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Writings.dev</h1>
+
+        <nav>
+          <a href="#categories">Categories</a>
+          <a href="#articles">Articles</a>
+          <a href="#about">About</a>
+        </nav>
+      </header>
+      <main>
+        <img src="./Logo.svg" alt="writings.dev logo" class="main-logo" />
+        <h1 class="title">Writings for Developers</h1>
+        <h2 class="description">
+          curated collection of articles for busy developers
+        </h2>
+        <hr class="divider" />
+
+        <div class="category-section-container">
+          <div class="view-switch-container">
+            <a href="/">
+              <img src="Grid Icon.svg" alt="Grid Icon" />
+            </a>
+            <a href="/">
+              <img src="List Icon.svg" alt="List Icon" />
+            </a>
+          </div>
+
+          <div class="category-container">
+            <h4 class="category">Javascript</h4>
+            <h4 class="category">Devops</h4>
+            <h4 class="category">Cloud</h4>
+            <h4 class="category">Terraform</h4>
+            <h4 class="category">Architecture</h4>
+            <h4 class="category">Scalability</h4>
+            <h4 class="category">Explainers</h4>
+          </div>
+        </div>
+
+        <section class="card-wrapper">
+          <div class="card-container">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </section>
+
+        <nav aria-label="pagination" class="pagination-container">
+          <a>Previous</a>
+          <div class="page-numbers">
+            <a class="active-page">1</a>
+            <a >2</a>
+            <a>3</a>
+            <a>4</a>
+            <a>5</a>
+          </div>
+          <a>Next</a>
+        </nav>
+      </main>
+
+      <footer>
+        FOOTER
+      </footer>
+    </div>
+  </body>
+</html>
